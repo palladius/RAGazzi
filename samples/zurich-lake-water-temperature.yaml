@@ -1,3 +1,5 @@
+ragazzi:
+  stage: test
 llm:
   model: gemini-15-pro
   context: |

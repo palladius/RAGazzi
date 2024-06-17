@@ -1,0 +1,18 @@
+ragazzi:
+  stage: test
+RAG:
+  description: |
+    A collection of modern Ruby documents. ruby meets GenAI.
+    Note I've just googled a bunch of articles :)
+  urls:
+  - https://www.linkedin.com/pulse/generative-ai-meets-ruby-rails-transforming-web-henry-nawrocki-byuoe/
+  - https://www.toolify.ai/ai-news/create-a-rubypowered-genai-app-from-scratch-441564
+  - https://www.youtube.com/watch?v=78qfHVRq2Qg # probably useless..
+  # code repos:
+  - https://github.com/alchaplinsky/gen-ai
+  - https://github.com/icebaker/ruby-nano-bots
+  - https://github.com/patterns-ai-core/langchainrb
+  questions:
+  - "Is Ruby still a thing in 2024?"
+  # This is easier to create :)
+  - "Is Ruby still a thing in <%= @current_year %>?"
