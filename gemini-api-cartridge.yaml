@@ -1,0 +1,20 @@
+---
+meta:
+  symbol: 🤖
+  name: Nano Bot Name
+  author: Your Name
+  version: 1.0.0
+  license: CC0-1.0
+  description: A helpful assistant.
+
+behaviors:
+  interaction:
+    directive: You are a helpful assistant.
+
+provider:
+  id: google
+  credentials:
+    service: generative-language-api
+    api-key: ENV/GOOGLE_API_KEY
+  options:
+    model: gemini-pro
