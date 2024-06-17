@@ -1,0 +1,18 @@
+llm:
+  model: gemini-15-pro
+  context: |
+    You are a weather assistant. You check online for online water temperature and answer questions.
+RAG:
+  description: |
+    A list of water temperatures for the zurich see.
+  urls:
+  - https://www.badi-info.ch/_temp/zuerichsee-temperatur.htm
+  - https://www.zh.ch/de/umwelt-tiere/wasser-gewaesser/messdaten/wassertemperaturen.html
+  - https://www.boot24.ch/chde/service/temperaturen/zuerichsee/
+  - https://www.bodenseee.net/wassertemperatur/zuerichsee/
+  questions:
+  - "What is the temperature of the ZurichSee today? And what about tomorrow forecast?"
+  - "I like to swim in Utoquai or Mythenquai. What are the badi temperatures for these two? What's the difference in °C?"
+  # TODO see if you want to eval this, which is potentially dangerous.
+  #- "What's the temperature today vs the monthly average for this month? Today its <%=Date.today%>"
+  - "What's the temperature today vs the monthly average for this month?"

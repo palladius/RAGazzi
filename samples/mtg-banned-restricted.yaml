@@ -1,0 +1,13 @@
+RAG:
+  description: |
+    A list of MTG cards restricted or banned by type.
+  urls:
+  - https://magic.wizards.com/en/formats
+  # https://mtg.fandom.com/wiki/Emperor
+  # https://magic.wizards.com/en/news/announcements/may-13-2024-banned-and-restricted-announcement
+  - https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline
+  - https://magic.wizards.com/en/banned-restricted-list
+  questions:
+  - "I come from the early days where MtG was: Type 1, Type 2, Type 1.5 and Extended. Please explain to me the MTG format names."
+  - "In which formats is Black Lotus legal?"
+  - "In which formats is Emrakul legal?"

@@ -1,0 +1,12 @@
+RAG:
+  description: |
+    A number of Italian Newspaper homepages.
+  urls:
+    - https://www.ilfattoquotidiano.it/
+    # RSS: https://www.repubblica.it/rss/esteri/rss2.0.xml
+    - https://www.repubblica.it/
+    - https://www.corriere.it/
+  questions:
+  - "What's new in Italy?"
+  - "What's new in Politics?"
+  - "Any war news?"
