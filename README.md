@@ -1,5 +1,7 @@
 # RAGazzi
 
+Self: https://github.com/palladius/ragazzi
+
 RAGazzi is the non-plus-ultra distillation of RAG-as-a-Service (ragaas)
 
 # Context

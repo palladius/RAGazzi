@@ -42,6 +42,11 @@ GEM
       signet (>= 0.16, < 2.a)
     jwt (2.8.1)
       base64
+    lolcat (100.0.1)
+      manpages (~> 0.6.1)
+      optimist (~> 3.0.0)
+      paint (~> 2.1)
+    manpages (0.6.1)
     maritaca-ai (1.2.0)
       event_stream_parser (~> 1.0)
       faraday (~> 2.9)
@@ -76,7 +81,9 @@ GEM
     ollama-ai (1.2.1)
       faraday (~> 2.9)
       faraday-typhoeus (~> 1.1)
+    optimist (3.0.1)
     os (1.1.4)
+    paint (2.3.0)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -105,7 +112,9 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  faraday (~> 2.9, >= 2.9.1)
   gemini-ai (~> 4.0.0)
+  lolcat
   nano-bots (~> 3.1.0)
 
 BUNDLED WITH
