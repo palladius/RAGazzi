@@ -48,42 +48,40 @@ def run_ragazzo(ragazzo_name, prompt)
   $ragazzo.run_rag()
 end
 
-def help reason: nil, exit: true
-  puts "Usage: ruby main.rb [command] [prompt]"
+def help reason: nil, exit: true, show_ragazzi: false
+  puts "Usage: ruby main.rb command [ragazzo_name] [prompt]"
   puts "Commands:"
   puts "  list:          List available Ragazzi"
   puts "  run <ragazzo>: Run a Ragazzo with the specified prompt"
   puts "  help:          Show this help message"
   puts "Error: #{reason}" if reason
+  show_ragazzi if show_ragazzi
+  exit(111) if exit
 end
 
 def parse_args
   if ARGV.empty?
-    help
+    help reason: 'No args provided'
   elsif ARGV[0] == 'list'
     show_ragazzi
   elsif ARGV[0] == 'run'
     if ARGV.size < 2
-      help
-      show_ragazzi # since you're not giving me the proper ARGV2
-      exit(112)
+      help(reason: 'I need at least 2 ARGV', exit: false, show_ragazzi: true)
     else
       run_ragazzo(ARGV[1], ARGV[2..-1].join(' '))
     end
   elsif ARGV[0] == 'help'
-    help
+    help reason: 'Since you asked..'
   else
-    puts "Invalid command: #{ARGV[0]}"
-    help
+    help reason: "Invalid command: #{ARGV[0]}"
   end
 end
 
 def main
   parse_args
   # exit until one ARGV is provided
-  puts ARGV.size
-  puts()
-  puts ARGV[0]
+  #puts ARGV.size
+  #puts ARGV[0]
   if ARGV.size < 2
     help
     exit 111

@@ -19,6 +19,8 @@ I think it's cooler to lean on top of `ruby-nano-bots`, or of `langchainrb` to m
 
 # Running it
 
+First install `html2text`.
+
 ```
  ./main.rb run latest-news-italy
 ```

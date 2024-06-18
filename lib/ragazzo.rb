@@ -26,6 +26,8 @@ InitialPrompt = <<PROMPT
 You are a helpful assistant trying to answer questions from user based on information retrieved online right now.
 I will provide you with URLs and their content, separated by this string: "---------------------------------------".
 Finally I'll provide you with a question. Please give me an answer to that questions at the best of your ability leveraging what you read on those URLs which provide additional context.
+
+For your information, the current date is: #{Date.today}.
 PROMPT
 PromptSeparator = "\n---------------------------------------\n\n"
 ChosingPrompt = "\nAnswer: "
@@ -49,6 +51,7 @@ class RAGazzo
 
 
   def any_prompt
+    puts("Warning. Prompt is not provided. Picking a random one.")
     prompts.sample
   end
 
@@ -70,10 +73,17 @@ class RAGazzo
 
       urls.each do |url|
         puts("* Fetching URL: #{url}")
-        buridone = text_curl(url)
-        f.write(PromptSeparator)
-        f.write("From URL: #{url}\n\n")
-        f.write(buridone)
+        buridone = text_curl(url) rescue nil
+        if buridone
+          f.write(PromptSeparator)
+          f.write("From URL: #{url}\n\n")
+          puts(buridone) if verbose
+          #f.write(buridone.force_encoding("utf-8"))
+          #f.write(buridone.encode("iso-8859-1").force_encoding("utf-8"))
+          f.write(buridone)
+        else
+          puts("Some error fetching URL: #{url} => skipping")
+        end
         #puts(buridone) if verbose
       end
       f.write(PromptSeparator)
@@ -91,20 +101,25 @@ class RAGazzo
   def run_rag()
     puts "run_rag - wait for it"
     puts("+ RAGazzo: #{name}")
-    puts("+ Prompts: #{name}")
+    puts("+ Prompts: #{prompts}")
     puts("+ URLs to fetch: #{urls.count}")
     #puts("+ Questions: #{questions.count}")
     rag_file = "out/tmp.#{ @name }.prompt"
     ret = build_rag_file(rag_file:)
     # execute rag
+    puts("+ Now executing RAG..")
     execute_rag(rag_file:)
   end
 
+  # super lazy..
   def execute_rag(rag_file:, engine: :ollama, ollama_model: :gemma)
     # 1. ollama - WORKS
-    #`cat '#{rag_file}' | ollama run gemma | tee '#{rag_file}.ollama_gemma.out'`
-    #`cat '#{rag_file}' | ollama run llama3 | tee '#{rag_file}.ollama_llama3.out'`
+    puts("+ execute_rag(): Gemma..")
+    `cat '#{rag_file}' | ollama run gemma | tee '#{rag_file}.ollama_gemma.out'`
+    puts("+ execute_rag(): Llama3..")
+    `cat '#{rag_file}' | ollama run llama3 | tee '#{rag_file}.ollama_llama3.out'`
     # 2. nanobot - CLI
+    puts("+ execute_rag(): Gemini via CLI..")
     `cat '#{rag_file}' | nb assistant.yml - eval > #{rag_file}.gemini-pro.out`
 
     # 2. nanobot - Ruby  - more idiomatic but i need to run!
