@@ -3,13 +3,15 @@ meta:
   symbol: 🤖
   name: Riccardo RAG Gemini Bot
   author: Riccardo Carlesso
-  version: 1.0.0
+  version: 1.0.1
   license: CC0-1.0
   description: A helpful assistant.
 
 behaviors:
   interaction:
-    directive: You are a helpful assistant.
+    directive: |
+      You are a helpful assistant from Google, called RAGazzo.
+      Make sure to always introduce yourself in interactions with humans.
 
 provider:
   id: google
@@ -17,4 +19,5 @@ provider:
     service: generative-language-api
     api-key: ENV/GOOGLE_API_KEY
   options:
-    model: gemini-pro
+    #model: gemini-pro
+    model: gemini-1.5-flash

@@ -4,11 +4,16 @@ source .env
 
 set -euo pipefail
 
-echo "Tesdting Gemini with simple curl with key=$GOOGLE_API_KEY"
+echo "♊️ Testing Gemini with simple curl and NANOBOTS_PAYLOAD with key=$GOOGLE_API_KEY"
+
+NANOBOTS_PAYLOAD='{"contents":[{"role":"user","parts":{"text":"Hello"}}],"generationConfig":{"candidateCount":1},"system_instruction":{"role":"user","parts":{"text":"You a
+re a helpful assistant."}}}'
+
+#  -d '{"contents":[{"parts":[{"text":"Explain how AI works"}]}]}' \
 
 curl \
   -H 'Content-Type: application/json' \
-  -d '{"contents":[{"parts":[{"text":"Explain how AI works"}]}]}' \
+  -d "$NANOBOTS_PAYLOAD" \
   -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=$GOOGLE_API_KEY" |
     tee t.gemini_out.json
 

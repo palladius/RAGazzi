@@ -1,2 +1,6 @@
 .env
 .echodo_history
+.git-privatize
+t.*
+.ondir*
+*riccardo.yaml
