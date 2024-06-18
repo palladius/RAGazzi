@@ -1,10 +1,12 @@
 ragazzi:
   stage: test
 llm:
-  model: gemini-15-pro
-  context: |
+  #model: gemini-15-pro
+  context_deprecated: |
     You are a weather assistant. You check online for online water temperature and answer questions.
 RAG:
+  context: |
+    You are a weather assistant. You check online for online water temperature and answer questions.
   description: |
     A list of water temperatures for the zurich see.
   urls:
@@ -18,3 +20,4 @@ RAG:
   # TODO see if you want to eval this, which is potentially dangerous.
   #- "What's the temperature today vs the monthly average for this month? Today its <%=Date.today%>"
   - "What's the temperature today vs the monthly average for this month?"
+  - "Provide a JSON with 3 values: zurichsee_temperature_today, zurichsee_temperature_tomorrow, reasoning. Just put pure Centigrad values in the first two, and your more verbose reasoning in the third"

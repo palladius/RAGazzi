@@ -13,3 +13,9 @@ test3-nanobot-key: # broken
 	nb cartridges/gemini-api.yaml - eval "Hello"
 test4-nanobot-key:
 	nb cartridges/gemini-svcacct.yaml - eval "Hello"
+
+zurichsee-water:
+	cat out/tmp.zurich-lake-water-temperature.prompt | nb assistant.yml - eval > out/tmp.zurich-lake-water-temperature.prompt.gemini-pro.out
+
+clean:
+	rm out/tmp.*

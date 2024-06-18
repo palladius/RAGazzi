@@ -17,6 +17,11 @@ But again, if you're not Italian you're not probably getting these jokes, so eno
 
 I think it's cooler to lean on top of `ruby-nano-bots`, or of `langchainrb` to minimize the code.
 
+# Running it
+
+```
+ ./main.rb run latest-news-italy
+```
 # Thanks
 
 * https://github.com/icebaker/ruby-nano-bots
