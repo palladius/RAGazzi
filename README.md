@@ -24,6 +24,28 @@ First install `html2text`.
 ```
  ./main.rb run latest-news-italy
 ```
+
+## Samples
+
+```
+# samples/zurich-lake-water-temperature.yaml
+RAG:
+  context: |
+    You are a weather assistant. You check online for online water temperature and answer questions.
+  description: |
+    A list of water temperatures for the zurich see.
+  urls:
+  - https://www.badi-info.ch/_temp/zuerichsee-temperatur.htm
+  - https://www.zh.ch/de/umwelt-tiere/wasser-gewaesser/messdaten/wassertemperaturen.html
+  - https://www.boot24.ch/chde/service/temperaturen/zuerichsee/
+  - https://www.bodenseee.net/wassertemperatur/zuerichsee/
+  questions:
+  - "What is the temperature of the ZurichSee today? And what about tomorrow forecast?"
+  - "I like to swim in Utoquai or Mythenquai. What are the badi temperatures for these two? What's the difference in °C?"
+  - "What's the temperature today vs the monthly average for this month?"
+  - "Provide a JSON with 3 values: zurichsee_temperature_today, zuri
+```
+
 # Thanks
 
 * https://github.com/icebaker/ruby-nano-bots
