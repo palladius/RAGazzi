@@ -16,6 +16,8 @@ test4-nanobot-key:
 
 zurichsee-water:
 	cat out/tmp.zurich-lake-water-temperature.prompt | nb assistant.yml - eval > out/tmp.zurich-lake-water-temperature.prompt.gemini-pro.out
+italy-news:
+	ruby main.rb run latest-news-italy Summarize any news regarding Italian celebrities
 
 clean:
 	rm out/tmp.*

@@ -2,6 +2,8 @@ You are a helpful assistant trying to answer questions from user based on inform
 I will provide you with URLs and their content, separated by this string: "---------------------------------------".
 Finally I'll provide you with a question. Please give me an answer to that questions at the best of your ability leveraging what you read on those URLs which provide additional context.
 
+For your information, the current date is: 2024-06-19.
+
 ---------------------------------------
 
 From URL: https://www.badi-info.ch/_temp/zuerichsee-temperatur.htm
@@ -83,7 +85,10 @@ Bodenseee.net
 Bodensee News
     * Pegel
           o Bodensee_Pegel_Konstanz
+          o Pegel_Berlingen
           o Pegel_Bregenz
+          o Pegel_Friedrichshafen
+          o Pegel_Radolfzell
           o Pegel_Romanshorn
           o Tiefgang
     * Wassertemperatur
@@ -99,16 +104,16 @@ Bodensee News
 
 
 ****** Wassertemperatur ZÃ¼richsee ******
-***** 19Â°C aktuelle Wassertemperatur, 18.06.2024 *****
+***** 20Â°C aktuelle Wassertemperatur, 19.06.2024 *****
  ____________________________________________
 |Messung____________________|Wassertemperatur|
-|heute______________________|19_Â°C________|
-|Prognose_morgen,_19.06_____|20_Â°C________|
-|Prognose_Ã¼bermorgen,_20.|20_Â°C________|
-|gestern____________________|19_Â°C________|
+|heute______________________|20_Â°C________|
+|Prognose_morgen,_20.06_____|20_Â°C________|
+|Prognose_Ã¼bermorgen,_21.|20_Â°C________|
+|gestern____________________|20_Â°C________|
 |vorgestern_________________|19_Â°C________|
 |Vorwoche___________________|20_Â°C________|
-Die derzeitige Wassertemperatur von 19Â°C ist recht_kalt zum Baden.
+Die derzeitige Wassertemperatur von 20Â°C ist recht_kalt zum Baden.
 Quelle: MeteoNews.* Alle Daten auf dieser Seite sind Rohdaten ohne GewÃ¤hr *
 4.1/5 - (14 Bewertungen)
 
@@ -143,23 +148,21 @@ Thalwil, Uerikon, WÃ¤denswil, Wollerau, Zollikon, ZÃ¼rich
  ____________________________________________________
 |See________________________|heute|morgen|Ã¼bermorg|n
 |Bielersee__________________|18Â�|18Â°|18Â°_____|
-|Bodensee___________________|18Â�|18Â°|18Â°_____|
+|Bodensee___________________|19Â�|19Â°|19Â°_____|
 |Brienzersee________________|16Â�|16Â°|16Â°_____|
-|Genfersee__________________|18Â�|18Â°|18Â°_____|
+|Genfersee__________________|19Â�|19Â°|19Â°_____|
 |Lago_Maggiore______________|17Â�|17Â°|17Â°_____|
-|Luganersee_/_Lago_di_Lugano|19Â�|19Â°|19Â°_____|
-|Murtensee__________________|19Â�|19Â°|19Â°_____|
+|Luganersee_/_Lago_di_Lugano|20Â�|20Â°|20Â°_____|
+|Murtensee__________________|20Â�|20Â°|20Â°_____|
 Quelle: MeteoNews
 
 **** Bootsmarkt Bodensee ****
-[IMG_3843] Werftbau_HollÃ¤ndisches_Tuckerboot Preis: 23000 EUR
-[366286714_699401852200039_8366985066154315381_n] Hartmann_Hartmann_Prototyp
-Preis: 22000 EUR
-[aufm_Trailer1] Rolf_Jacobson_SchÃ¤renkreuzer_RJ85 Preis: 10000 EUR
+[10] Sealine_S_25 Preis: 63299 EUR
+[20220908_193942] Unbekannt,_DÃ¤nemark_Drachen Preis: 35000 EUR
+[IMG_4460] Corsiva_Corsiva_595_Tender Preis: 34000 EUR
+[Rebell__AuÃenansicht] Rebell_Rebell_R25 Preis: 4500 EUR
 [IMG_5581] Hellwig_Hellwig_Sportboot_Milos_V_630_IB_Cabin_/_Mercruiser_4,5_L-
 250 Preis: 64900 EUR
-[20210703_132220] Chaparral_Gepflegter_Chaparral_180SS_Bowrider Preis: 19.000
-VH EUR
 
 
 
@@ -304,7 +307,6 @@ Suchen0FavoritenAnmeldenMenÃ¼
     * BootszubehÃ¶r
 ***** PopulÃ¤re Hersteller *****
     * Motorboote
-          o Azimut_Motorboote
           o Bavaria_Motorboote
           o Bayliner_Motorboote
           o Boston_Whaler_Motorboote
@@ -322,6 +324,7 @@ Suchen0FavoritenAnmeldenMenÃ¼
           o Quicksilver_Motorboote
           o Regal_Motorboote
           o Sea_Ray_Motorboote
+          o Sessa_Motorboote
           o Stingray_Motorboote
           o Windy_Motorboote
     * Segelboote
@@ -335,12 +338,12 @@ Suchen0FavoritenAnmeldenMenÃ¼
           o Esse_Segelboote
           o Fareast_Segelboote
           o Faurby_Segelboote
+          o Frauscher_Segelboote
           o Hallberg-Rassy_Segelboote
           o Hanse_Segelboote
           o Heinrich_Werft_Segelboote
           o Italia_Yachts_Segelboote
           o Jeanneau_Segelboote
-          o Moser_Segelboote
           o Ovington_Boats_Segelboote
           o RS_Segelboote
           o Sunbeam_Segelboote
@@ -350,16 +353,17 @@ Suchen0FavoritenAnmeldenMenÃ¼
 english/International]
 20°
 ****** Wassertemperatur ZÃ¼richsee ******
-Aktualisiert gestern
+Aktualisiert vor 18 Minuten
 Entdecken Sie die aktuelle Wassertemperatur des ZÃ¼richsees! TÃ¤glich
 aktualisiert, damit Sie jederzeit auf dem neuesten Stand sind.
 [Z&uuml;richsee]
 ***** ZÃ¼richsee *****
     * 20°
-      Heute 18.06.
+      Heute 19.06.
     * 20°
-      Morgen 19.06.
-    * Donnerstag 20.06.
+      Morgen 20.06.
+    * 20°
+      Freitag 21.06.
     * Wassertemperatur_aller_Seen
     * Mietboote_am_Zürichsee
 Bei den Temperaturen handelt es sich um die mittlere OberflÃ¤chentemperatur des
@@ -604,7 +608,7 @@ hydrometrie@bd.zh.ch
 
 ---------------------------------------
 
-Question: I like to swim in Utoquai or Mythenquai. What are the badi temperatures for these two? What's the difference in °C?
+Question: What is the temperature of the ZurichSee today? And what about tomorrow forecast?
 
 
 Answer: 
