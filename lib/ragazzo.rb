@@ -130,22 +130,24 @@ class RAGazzo
   end
 
   # super lazy..
-  def execute_rag(rag_file:, engine: :gemini, ollama_model: :gemma)
+  def execute_rag(rag_file:, engine: :ollama, ollama_model: :gemma)
     # 1. ollama - WORKS
     if engine == :ollama || engine == :all
-      puts("+ execute_rag(): Llama..")
+      puts("+ execute_rag(): 🦙🦙 OLLAMA models..")
       # TODO discrimintate between Gemma and Llama3.. for now we do both
       puts("+ execute_rag(): Gemma..")
       `cat '#{rag_file}' | ollama run gemma | tee '#{rag_file}.ollama_gemma.out'`
       puts("+ execute_rag(): Llama3..")
       `cat '#{rag_file}' | ollama run llama3 | tee '#{rag_file}.ollama_llama3.out'`
     end
+
     if engine == :gemini
       # 2. nanobot - CLI
       puts("+ execute_rag(): Gemini via CLI..")
       puts("  - Prerequisite[SA]: env[GOOGLE_REGION]='#{ENV['GOOGLE_CREDENTIALS_FILE_PATH']}'")
       puts("  - Prerequisite[SA]: env[GOOGLE_REGION]='#{ENV['GOOGLE_REGION']}'")
       puts("  - Prerequisite[AK]: env[GOOGLE_API_KEY]='#{ENV['GOOGLE_API_KEY']}'")
+      puts('This is useless, IMHO its not reading the input or doesnt have enough tokens.')
       # puts("+ execute_rag(): Gemini SA..")
       # ret  = `cat '#{rag_file}' | nb cartridges/gemini-svcacct.yaml - eval >'#{rag_file}.gemini-pro-sa.out' 2>'#{rag_file}.gemini-pro-sa.err'` # rescue nil
       # if $?.exitstatus != 0
