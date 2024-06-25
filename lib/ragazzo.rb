@@ -155,9 +155,9 @@ class RAGazzo
       #   puts `head -1 #{rag_file}.gemini-pro-sa.err`
       # end
       execute_nanobot(rag_file:, cartridge: 'cartridges/gemini-svcacct.yaml', name: :gemini_svc_acct) # should work
-      execute_nanobot(rag_file:, cartridge: 'cartridges/gemini-api.yaml', name: :gemini_api_key) # should be broken
+      execute_nanobot(rag_file:, cartridge: 'cartridges/gemini-apikey.yaml', name: :gemini_api_key) # now fixed!
       # puts("+ execute_rag(): Gemini AK..")
-      # ret = `cat '#{rag_file}' | nb cartridges/gemini-api.yaml     - eval >'#{rag_file}.gemini-pro-api.out' 2>'#{rag_file}.gemini-pro-api.err'` # rescue nil
+      # ret = `cat '#{rag_file}' | nb cartridges/gemini-apikey.yaml     - eval >'#{rag_file}.gemini-pro-api.out' 2>'#{rag_file}.gemini-pro-api.err'` # rescue nil
       # if $?.exitstatus != 0
       #   puts("❎ 'Gemini API KEY' Error ($?=#{$?.exitstatus}): #{$!}")
       # end

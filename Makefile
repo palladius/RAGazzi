@@ -10,8 +10,9 @@ test2-gbaptista:
 
 # BROKEN: https://github.com/icebaker/ruby-nano-bots/issues/21
 test3-nanobot-key: # broken
-	nb cartridges/gemini-api.yaml - eval "Hello"
-test4-nanobot-key:
+	nb cartridges/gemini-apikey.yaml - eval "Hello"
+
+test4-nanobot-svcacct:
 	nb cartridges/gemini-svcacct.yaml - eval "Hello"
 	nb cartridges/gemini15-svcacct.yaml - eval "Hello"
 

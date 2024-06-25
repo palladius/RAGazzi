@@ -79,6 +79,6 @@ module Faraday
 end
 
 puts '👋 Testing Faraday after monkeypatching it..'
-bot = NanoBot.new(cartridge: 'cartridges/gemini-api.yaml')
+bot = NanoBot.new(cartridge: 'cartridges/gemini-apikey.yaml')
 
 puts bot.eval('Write a story about a magic backpack')
